@@ -166,7 +166,7 @@ async function handleMessageEvent(event) {
                   "Content-Type": "application/x-www-form-urlencoded"
                 },
                 auth: {
-                  bearer: "KkD5Q5KrOjTl9BcwQBxBstj4qZpo8bu0Kk6q9bAPJqv" //token
+                  bearer: "JZ0NMocuEk8rtF1f60LG0NlZXLBJzIeAKIypMedfIwb" //token
                 },
                 form: {
                   message: `this is eventext=${data.del}` //ข้อความที่จะส่ง 
@@ -196,7 +196,7 @@ async function handleMessageEvent(event) {
                   "Content-Type": "application/x-www-form-urlencoded"
                 },
                 auth: {
-                  bearer: "KkD5Q5KrOjTl9BcwQBxBstj4qZpo8bu0Kk6q9bAPJqv" //token
+                  bearer: "JZ0NMocuEk8rtF1f60LG0NlZXLBJzIeAKIypMedfIwb" //token
                 },
                 form: {
                   message: `this is eventext=${data.del}` //ข้อความที่จะส่ง
@@ -235,7 +235,7 @@ async function handleMessageEvent(event) {
             "Content-Type": "application/x-www-form-urlencoded"
           },
           auth: {
-            bearer: "KkD5Q5KrOjTl9BcwQBxBstj4qZpo8bu0Kk6q9bAPJqv" //token
+            bearer: "JZ0NMocuEk8rtF1f60LG0NlZXLBJzIeAKIypMedfIwb" //token
           },
           form: {
             message: `this is eventext=${data.id}` //ข้อความที่จะส่ง
