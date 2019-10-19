@@ -260,59 +260,61 @@ async function handleMessageEvent(event) {
   } else if (eventText === "1") {
     let msg = {
       type: "text",
-      text: capital.MSG
+      text: '102 หมู่ 12 ตำบล กำแพงแสน อำเภอ กำแพงแสน จังหวัด นคปฐม 73140'
     };
       return client.replyMessage(event.replyToken, msg);
   }  else if (eventText === "2") {
     let msg = {
       type: "text",
-      text: withdraw.MSG
+      text: '(ok)>> Pack 1 << (ok) 
+      ค่าเช่าเดือนละ 4500 บาท (แอร์, ทีวี, กล่องจาน, เครื่องทำน้ำอุ่น, เฟอร์นิเจอร์, เตียงคู่)
+      ค่าน้ำ เหมา 100 บาท 
+      ค่าไฟ 8 บาท
+      (scissors)>> Pack 2 << (scissors)
+      ค่าเช่าเดือนละ 5000 บาท (แอร์, ทีวี, กล่องจาน, เครื่องทำน้ำอุ่น, เฟอร์นิเจอร์, เตียงคู่, ตู้เย็น, ไมโครเวฟ)
+      ค่าน้ำ เหมา 100 บาท 
+      ค่าไฟ 8 บาท'
     };
       return client.replyMessage(event.replyToken, msg);
-  }  else if (eventText === "2.1") {
+  }  else if (eventText === "3") {
     let msg = {
       type: "text",
-      text: withdraw.MSG1
+      text: 'สำหรับสิ่งอำนวยความสะดวกของทางหอพักจะมีอาทิเช่น ลิฟต์ เครื่องซักผ้า ตู้กดน้ำ เครื่องปริ้น ที่นั่งอ่านหนังสือ ที่จอดรถ อีกทั้งยังมีคีย์การ์ดและระบบสแกนลายนิ้วมือด้วยค่ะ'
     };
       return client.replyMessage(event.replyToken, msg);
-  } else if (eventText === "2.2") {
+  } else if (eventText === "4") {
     let msg = {
       type: "text",
-      text: withdraw.MSG2
+      text: 'สามารถชมรูปภาพหอพักและห้องพักได้ที่เพจ face book คลิกลิ้งค์ด้านหลังได้เลยค่ะ 
+      https://www.facebook.com/%E0%B8%AB%E0%B8%AD%E0%B8%9E%E0%B8%B1%E0%B8%81%E0%B9%81%E0%B8%A1%E0%B9%80%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%81%E0%B8%B3%E0%B9%81%E0%B8%9E%E0%B8%87%E0%B9%81%E0%B8%AA%E0%B8%99-790681051046302/'
     };
       return client.replyMessage(event.replyToken, msg);
-  } else if (eventText === "2.3") {
+  } else if (eventText === "5") {
     let msg = {
       type: "text",
-      text: withdraw.MSG3
+      text: 'สามารถชมรูปภาพหอพักและห้องพักได้ที่เพจ face book คลิกลิ้งค์ด้านหลังได้เลยค่ะ 
+      https://www.facebook.com/%E0%B8%AB%E0%B8%AD%E0%B8%9E%E0%B8%B1%E0%B8%81%E0%B9%81%E0%B8%A1%E0%B9%80%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%81%E0%B8%B3%E0%B9%81%E0%B8%9E%E0%B8%87%E0%B9%81%E0%B8%AA%E0%B8%99-790681051046302/'
     };
       return client.replyMessage(event.replyToken, msg);
   }
-  else if (eventText === "3") {
+  else if (eventText === "6") {
     let msg = {
       type: "text",
-      text: fund.MSG
+      text: 'โทร. 0871712116'
     };
      return client.replyMessage(event.replyToken, msg);
   } else if (eventText === "คุยกับบอท") {
     let msg = {
       type: "text",
       text:
-      "น้องบอทสามารถตอบคำถามโดยกด\n1.ทุนวิจัย\n2.เบิกเงินวิจัย\n3.กองทุนสนับสนุนงานวิจัย\n4.เอกสารดาวน์โหลด\n5.ที่อยู่"
+      "ท่านสามารถสอบถามข้อมูลจากบอทได้โดยพิมพ์หมายเลขเพื่อสอบถามได้ดังนี้\n(1)ที่อยู่\n(2)ค่าเช่า\n(3)สิ่งอำนวยความสะดวก\n(4)รูปภาพ\n(5)facebook\n(6)เบอร์โทร\nเลือกหัวข้อในการสอบถามได้เลยค่ะ"
     };
      return client.replyMessage(event.replyToken, msg);
-  }  else if (eventText === "4") {
+  }  else {
     let msg = {
       type: "text",
       text:
-        "สวัสดีค่ะท่านสามารถดาวน์โหลดเอกสารต่างๆได้ในลิงค์ด้านล่างนี้\nhttps://ird.rmutr.ac.th/formdownload/ "
-    };
-     return client.replyMessage(event.replyToken, msg);
-  } else {
-    let msg = {
-      type: "text",
-      text:
-        "น้องบอทสามารถตอบคำถามโดยกด\n1.ทุนวิจัย\n2.เบิกเงินวิจัย\n3.กองทุนสนับสนุนงานวิจัย\n4.เอกสารดาวน์โหลด\n5.ที่อยู่"
+        "ท่านสามารถสอบถามข้อมูลจากบอทได้โดยพิมพ์หมายเลขเพื่อสอบถามได้ดังนี้\n(1)ที่อยู่\n(2)ค่าเช่า\n(3)สิ่งอำนวยความสะดวก\n(4)รูปภาพ\n(5)facebook\n(6)เบอร์โทร\nเลือกหัวข้อในการสอบถามได้เลยค่ะ"
     };
     if (eventText !== "hello, world" && eventText !== null) {
       //   clientDB.connect();
