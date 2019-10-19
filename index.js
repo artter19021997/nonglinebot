@@ -60,9 +60,8 @@ app.get("/data", (req, res) => {
 //});
 
 const config = {
-  channelAccessToken:
-    "ThXtHfpRU4AJDAQbAXs2UP3QSLzsqXi/TQ5D3nn85jPlrXJmyELlgXRCq1m3a54n7bzjjm5rF+y2ABIh4hdY/Mlm452KEu3QUPR/cwR7WLpSSVhU1e900yQcMZOoV8mhfdqohkHoDwLk88ZeSn4DNQdB04t89/1O/w1cDnyilFU=",
-  channelSecret: "0d3c6048012faf01cf74af21a7a85631"
+  channelAccessToken:"8FC6j5lCQ+Pv/zVBEdg884W4Ttf5zhEF6jAMuL4L22ltOb7JZUDb6HiCYMbf+Zr0Nl3f7zWhsev4f72kTxYSTBtZFmeUzLqAYG0ft1CYdArM9GsbsoeqSg6Wjh5UZsfrJp17znmS7psLuNcT6UFURwdB04t89/1O/w1cDnyilFU=",
+  channelSecret: "03154e6c1a360487b99ee9f162cc7691"
 };
 
 const client = new line.Client(config);
