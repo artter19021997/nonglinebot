@@ -89,14 +89,7 @@ async function handleMessageEvent(event) {
 
   let eventText = event.message.text.toLowerCase();
 
-  if (eventText === "5") {
-    let  msg = {
-      type: "text",
-      text: address.MSG
-      
-    };
-     return client.replyMessage(event.replyToken, msg);
-  } else if (eventText === "สอบถาม") {
+   if (eventText === "สอบถาม") {
     // console.dir();
     let msg = {
       type: "text",
