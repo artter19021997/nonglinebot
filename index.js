@@ -93,49 +93,49 @@ async function handleMessageEvent(event) {
     // console.dir();
     let msg = {
       type: "text",
-      text: query.MSG
+      text: 'ท่านสามารถสอบถามข้อมูลจากบอทได้โดยพิมพ์หมายเลขเพื่อสอบถามได้ดังนี้\n(1)ที่อยู่\n(2)ค่าเช่า\n(3)สิ่งอำนวยความสะดวก\n(4)รูปภาพ\n(5)เบอร์โทร\nเลือกหัวข้อในการสอบถามได้เลยค่ะ'
     };
       return client.replyMessage(event.replyToken, msg);
   } else if (eventText === "สอบถามหน่อยครับ") {
     let msg = {
       type: "text",
-      text: query.MSG
+      text: 'ท่านสามารถสอบถามข้อมูลจากบอทได้โดยพิมพ์หมายเลขเพื่อสอบถามได้ดังนี้\n(1)ที่อยู่\n(2)ค่าเช่า\n(3)สิ่งอำนวยความสะดวก\n(4)รูปภาพ\n(5)เบอร์โทร\nเลือกหัวข้อในการสอบถามได้เลยค่ะ'
     };
       return client.replyMessage(event.replyToken, msg);
   } else if (eventText === "สอบถามหน่อยค่ะ") {
     let msg = {
       type: "text",
-      text: query.MSG
+      text: 'ท่านสามารถสอบถามข้อมูลจากบอทได้โดยพิมพ์หมายเลขเพื่อสอบถามได้ดังนี้\n(1)ที่อยู่\n(2)ค่าเช่า\n(3)สิ่งอำนวยความสะดวก\n(4)รูปภาพ\n(5)เบอร์โทร\nเลือกหัวข้อในการสอบถามได้เลยค่ะ'
     };
       return client.replyMessage(event.replyToken, msg);
   } else if (eventText === "ถามไรหน่อย") {
     let msg = {
       type: "text",
-      text: query.MSG
+      text: 'ท่านสามารถสอบถามข้อมูลจากบอทได้โดยพิมพ์หมายเลขเพื่อสอบถามได้ดังนี้\n(1)ที่อยู่\n(2)ค่าเช่า\n(3)สิ่งอำนวยความสะดวก\n(4)รูปภาพ\n(5)เบอร์โทร\nเลือกหัวข้อในการสอบถามได้เลยค่ะ'
     };
       return client.replyMessage(event.replyToken, msg);
   } else if (eventText === "สวัสดีครับ") {
     let msg = {
       type: "text",
-      text: query.MSG
+      text: 'ท่านสามารถสอบถามข้อมูลจากบอทได้โดยพิมพ์หมายเลขเพื่อสอบถามได้ดังนี้\n(1)ที่อยู่\n(2)ค่าเช่า\n(3)สิ่งอำนวยความสะดวก\n(4)รูปภาพ\n(5)เบอร์โทร\nเลือกหัวข้อในการสอบถามได้เลยค่ะ'
     };
       return client.replyMessage(event.replyToken, msg);
   } else if (eventText === "สวัสดีค่ะ") {
     let msg = {
       type: "text",
-      text: query.MSG
+      text: 'ท่านสามารถสอบถามข้อมูลจากบอทได้โดยพิมพ์หมายเลขเพื่อสอบถามได้ดังนี้\n(1)ที่อยู่\n(2)ค่าเช่า\n(3)สิ่งอำนวยความสะดวก\n(4)รูปภาพ\n(5)เบอร์โทร\nเลือกหัวข้อในการสอบถามได้เลยค่ะ'
     };
       return client.replyMessage(event.replyToken, msg);
   } else if (eventText === "สวัสดี") {
     let msg = {
       type: "text",
-      text: query.MSG
+      text: 'ท่านสามารถสอบถามข้อมูลจากบอทได้โดยพิมพ์หมายเลขเพื่อสอบถามได้ดังนี้\n(1)ที่อยู่\n(2)ค่าเช่า\n(3)สิ่งอำนวยความสะดวก\n(4)รูปภาพ\n(5)เบอร์โทร\nเลือกหัวข้อในการสอบถามได้เลยค่ะ'
     };
       return client.replyMessage(event.replyToken, msg);
   } else if (eventText === "หวัดดี") {
     let msg = {
       type: "text",
-      text: query.MSG
+      text: 'ท่านสามารถสอบถามข้อมูลจากบอทได้โดยพิมพ์หมายเลขเพื่อสอบถามได้ดังนี้\n(1)ที่อยู่\n(2)ค่าเช่า\n(3)สิ่งอำนวยความสะดวก\n(4)รูปภาพ\n(5)เบอร์โทร\nเลือกหัวข้อในการสอบถามได้เลยค่ะ'
     };
       return client.replyMessage(event.replyToken, msg);
   } else if (eventText.replace(/\s+/g, '').slice(0,6)==="delete") { 
