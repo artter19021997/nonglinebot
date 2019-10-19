@@ -142,70 +142,67 @@ async function handleMessageEvent(event) {
    
    let delparams = eventText.slice(6, eventText.length);
  //  data.id=delparams
-   await clientDB.query("DELETE FROM question WHERE id=$1", [delparams],  (err, resDB)=>{
-           if (err) throw err;
-    else{
-       if (resDB.rowCount) {
-             data.del="Delete success"
-             let msg = {
-              type: "text",
-              text: data.del
-            };
-            request(
-              {
-                method: "POST",
-                uri: "https://notify-api.line.me/api/notify",
-                header: {
-                  "Content-Type": "application/x-www-form-urlencoded"
-                },
-                auth: {
-                  bearer: "JZ0NMocuEk8rtF1f60LG0NlZXLBJzIeAKIypMedfIwb" //token
-                },
-                form: {
-                  message: `this is eventext=${data.del}` //ข้อความที่จะส่ง 
-                }
-              },
-              (err, httpResponse, body) => {
-                if (err) {
-                  console.log(err);
-                } else {
-                  console.log(body);
-                }
-              }
-            );
-             return client.replyMessage(event.replyToken, msg);
-        }
-       else{
-            data.del="Delete error"
-            let msg = {
-              type: "text",
-              text: data.del
-            };
-            request(
-              {
-                method: "POST",
-                uri: "https://notify-api.line.me/api/notify",
-                header: {
-                  "Content-Type": "application/x-www-form-urlencoded"
-                },
-                auth: {
-                  bearer: "JZ0NMocuEk8rtF1f60LG0NlZXLBJzIeAKIypMedfIwb" //token
-                },
-                form: {
-                  message: `this is eventext=${data.del}` //ข้อความที่จะส่ง
-                }
-              },
-              (err, httpResponse, body) => {
-                if (err) {
-                  console.log(err);
-                } else {
-                  console.log(body);
-                }
-              }
-            );
-             return client.replyMessage(event.replyToken, msg);    
-        }
-   } 
+  clientDB.query("DELETE FROM question WHERE id=$1", [delparams], (err, resDB) => {
+       if (err)
+         throw err;
+       else {
+         if (resDB.rowCount) {
+           data.del = "Delete success";
+           let msg = {
+             type: "text",
+             text: data.del
+           };
+           request({
+             method: "POST",
+             uri: "https://notify-api.line.me/api/notify",
+             header: {
+               "Content-Type": "application/x-www-form-urlencoded"
+             },
+             auth: {
+               bearer: "JZ0NMocuEk8rtF1f60LG0NlZXLBJzIeAKIypMedfIwb" //token
+             },
+             form: {
+               message: `this is eventext=${data.del}` //ข้อความที่จะส่ง 
+             }
+           }, (err, httpResponse, body) => {
+             if (err) {
+               console.log(err);
+             }
+             else {
+               console.log(body);
+             }
+           });
+           return client.replyMessage(event.replyToken, msg);
+         }
+         else {
+           data.del = "Delete error";
+           let msg = {
+             type: "text",
+             text: data.del
+           };
+           request({
+             method: "POST",
+             uri: "https://notify-api.line.me/api/notify",
+             header: {
+               "Content-Type": "application/x-www-form-urlencoded"
+             },
+             auth: {
+               bearer: "JZ0NMocuEk8rtF1f60LG0NlZXLBJzIeAKIypMedfIwb" //token
+             },
+             form: {
+               message: `this is eventext=${data.del}` //ข้อความที่จะส่ง
+             }
+           }, (err, httpResponse, body) => {
+             if (err) {
+               console.log(err);
+             }
+             else {
+               console.log(body);
+             }
+           });
+           return client.replyMessage(event.replyToken, msg);
+         }
+       }
      });
    
   
