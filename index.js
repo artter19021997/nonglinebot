@@ -266,14 +266,14 @@ async function handleMessageEvent(event) {
   }  else if (eventText === "2") {
     let msg = {
       type: "text",
-      text: '(ok)>> Pack 1 << (ok) 
-      ค่าเช่าเดือนละ 4500 บาท (แอร์, ทีวี, กล่องจาน, เครื่องทำน้ำอุ่น, เฟอร์นิเจอร์, เตียงคู่)
-      ค่าน้ำ เหมา 100 บาท 
-      ค่าไฟ 8 บาท
-      (scissors)>> Pack 2 << (scissors)
-      ค่าเช่าเดือนละ 5000 บาท (แอร์, ทีวี, กล่องจาน, เครื่องทำน้ำอุ่น, เฟอร์นิเจอร์, เตียงคู่, ตู้เย็น, ไมโครเวฟ)
-      ค่าน้ำ เหมา 100 บาท 
-      ค่าไฟ 8 บาท'
+      text: '(ok)>> Pack 1 << (ok)\n'+ 
+      ' ค่าเช่าเดือนละ 4500 บาท (แอร์, ทีวี, กล่องจาน, เครื่องทำน้ำอุ่น, เฟอร์นิเจอร์, เตียงคู่)\n'+
+      'ค่าน้ำ เหมา 100 บาท '+
+      'ค่าไฟ 8 บาท'+
+      '(scissors)>> Pack 2 << (scissors)'+
+      'ค่าเช่าเดือนละ 5000 บาท (แอร์, ทีวี, กล่องจาน, เครื่องทำน้ำอุ่น, เฟอร์นิเจอร์, เตียงคู่, ตู้เย็น, ไมโครเวฟ)'+
+      'ค่าน้ำ เหมา 100 บาท '+
+      'ค่าไฟ 8 บาท'
     };
       return client.replyMessage(event.replyToken, msg);
   }  else if (eventText === "3") {
@@ -285,22 +285,22 @@ async function handleMessageEvent(event) {
   } else if (eventText === "4") {
     let msg = {
       type: "text",
-      text: 'สามารถชมรูปภาพหอพักและห้องพักได้ที่เพจ face book คลิกลิ้งค์ด้านหลังได้เลยค่ะ 
-      https://www.facebook.com/%E0%B8%AB%E0%B8%AD%E0%B8%9E%E0%B8%B1%E0%B8%81%E0%B9%81%E0%B8%A1%E0%B9%80%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%81%E0%B8%B3%E0%B9%81%E0%B8%9E%E0%B8%87%E0%B9%81%E0%B8%AA%E0%B8%99-790681051046302/'
+      text: 'สามารถชมรูปภาพหอพักและห้องพักได้ที่เพจ face book คลิกลิ้งค์ด้านหลังได้เลยค่ะ \n'+
+      'https://www.facebook.com/%E0%B8%AB%E0%B8%AD%E0%B8%9E%E0%B8%B1%E0%B8%81%E0%B9%81%E0%B8%A1%E0%B9%80%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%81%E0%B8%B3%E0%B9%81%E0%B8%9E%E0%B8%87%E0%B9%81%E0%B8%AA%E0%B8%99-790681051046302/'
     };
       return client.replyMessage(event.replyToken, msg);
   } else if (eventText === "5") {
     let msg = {
       type: "text",
-      text: 'สามารถชมรูปภาพหอพักและห้องพักได้ที่เพจ face book คลิกลิ้งค์ด้านหลังได้เลยค่ะ 
-      https://www.facebook.com/%E0%B8%AB%E0%B8%AD%E0%B8%9E%E0%B8%B1%E0%B8%81%E0%B9%81%E0%B8%A1%E0%B9%80%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%81%E0%B8%B3%E0%B9%81%E0%B8%9E%E0%B8%87%E0%B9%81%E0%B8%AA%E0%B8%99-790681051046302/'
+      text: 'สามารถชมรูปภาพหอพักและห้องพักได้ที่เพจ face book คลิกลิ้งค์ด้านหลังได้เลยค่ะ\n '+
+      'https://www.facebook.com/%E0%B8%AB%E0%B8%AD%E0%B8%9E%E0%B8%B1%E0%B8%81%E0%B9%81%E0%B8%A1%E0%B9%80%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%81%E0%B8%B3%E0%B9%81%E0%B8%9E%E0%B8%87%E0%B9%81%E0%B8%AA%E0%B8%99-790681051046302/'
     };
       return client.replyMessage(event.replyToken, msg);
   }
   else if (eventText === "6") {
     let msg = {
       type: "text",
-      text: 'โทร. 0871712116'
+      text: 'ติดต่อโทรศัพท์ : 0871712116'
     };
      return client.replyMessage(event.replyToken, msg);
   } else if (eventText === "คุยกับบอท") {
