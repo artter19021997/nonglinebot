@@ -1,5 +1,6 @@
 const express = require("express");
 const line = require("@line/bot-sdk");
+const bodyParser = require('body-parser')
 const address = require("./address");
 const query = require("./query");
 const capital = require("./capital");
@@ -11,12 +12,15 @@ require("dotenv").config();
 const { clientDB } = require("./connect");
 const app = express();
 app.use(cors())
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
 const data = {
   id: null,
   del:null
 };
 const IDB = "INSERT INTO question (question) VALUES ($1)";
-const SDB = "select * from question";
+const SDB = "select * from question order by id ASC";
 clientDB.connect();
 app.get("/data", (req, res) => {
   let result = [];
@@ -32,32 +36,58 @@ app.get("/data", (req, res) => {
   });
 });
 
-//  app.get("/delete/:id", (req, res) => {
-//     let eventText="del  e  te    34"
-//     //let sqlDetele = eventText.slice(0,6);
-  
-//      if (eventText.replace(/\s+/g, '').slice(0,6)==="delete") {
-//        res.send(eventText.replace(/\s+/g, ''))
-//     }
-//   let delparams = eventText.slice(6,eventText.length);
-//   console.log('====================================');
-//   console.log(`this value =${delparams}`);
-//   console.log('====================================');
-//   clientDB.query("DELETE FROM question WHERE id=$1", [delparams], (err, resDB) => {
-//     if (err) throw err;
-//     else{
-//         if (resDB.rowCount) {
-//             res.send(`Delete success`);
-//         }
-//         else{
-//                 res.send(JSON.stringify(resDB))
-//         }
-//     }
+app.post("/delete", (req, res) => {
+  // req.header("Content-Type", "application/json");
+   // console.log('====================================');
+   // //console.log(this value =${delparams});
+   // console.log('====================================');
+   clientDB.query(`DELETE FROM question WHERE id in (${req.body.data})`, (err, resDB) => {
+     if (err) throw err;
+     else{
+         if (resDB.rowCount) {
+             res.send(`Delete success`);
+         }
+         else{
+                 res.send(JSON.stringify(resDB))
+         }
+     }
+     
     
+   });
+   // console.log(req.body);
    
-//   });
-  
-//});
+   // res.send(req.body)
+   
+   
+ });
+ app.delete('/del', (req, res) => {
+   console.log(req.query.id);
+   clientDB.query(`DELETE FROM question WHERE id=(${req.query.id})`, (err, resDB) => {
+     if (err) throw err;
+     else{
+         if (resDB.rowCount) {
+             res.send(`Delete success`);
+         }
+         else{
+                 res.send(JSON.stringify(resDB))
+         }
+     }
+     
+    
+   });
+ })
+ 
+ 
+ app.get('/insert', (req, res) => {
+   clientDB.query(IDB, ["กด้กด"], (err, resDB) => {
+     if (err) throw err;
+     for (let row of resDB.rows) {
+       console.log(JSON.stringify(row));
+     }
+     //  clientDB.end();
+   });
+   res.send('GET request to the homepage')
+ })
 
 const config = {
   channelAccessToken:"8FC6j5lCQ+Pv/zVBEdg884W4Ttf5zhEF6jAMuL4L22ltOb7JZUDb6HiCYMbf+Zr0Nl3f7zWhsev4f72kTxYSTBtZFmeUzLqAYG0ft1CYdArM9GsbsoeqSg6Wjh5UZsfrJp17znmS7psLuNcT6UFURwdB04t89/1O/w1cDnyilFU=",
